@@ -24,7 +24,6 @@ int main(int argc, char** argv)
 
     int reads = argc > 1 ? stoi(argv[1]) : READS;
     int patternLength = argc > 2 ? stoi(argv[2]) : PATTERN_LENGTH;
-    cout << reads << " " << patternLength;
 
     ofstream fout("data");
     for (int i = 0; i < LENGTH; ++i)
@@ -43,6 +42,8 @@ int main(int argc, char** argv)
         }
         fout << endl;
     }
+
+    cout << "generate " << reads << " reads of " << patternLength << " length" << endl;
 
     fout.close();
     return 0;
